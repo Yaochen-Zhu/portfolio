@@ -6,7 +6,7 @@ export default function Home() {
   const recentPosts = getAllPosts().slice(0, 3);
 
   return (
-    <div className="max-w-[680px]">
+    <div className="max-w-[720px]">
       {/* Hero */}
       <section className="py-16 md:py-24">
         <h1 className="text-4xl md:text-5xl font-semibold font-sans tracking-tight mb-4">

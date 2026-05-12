@@ -49,7 +49,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--color-fg);
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {

@@ -11,7 +11,7 @@ export default function PostsPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="max-w-[680px]">
+    <div className="max-w-[720px]">
       <h1 className="text-3xl font-semibold font-sans tracking-tight mb-8">
         Posts
       </h1>

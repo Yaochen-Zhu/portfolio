@@ -53,7 +53,7 @@ export default async function OpinionPage({
   });
 
   return (
-    <div className="max-w-[680px]">
+    <div className="max-w-[720px]">
       <header className="mb-12">
         <h1 className="text-3xl md:text-4xl font-semibold font-sans tracking-tight mb-3">
           {op.frontmatter.title}

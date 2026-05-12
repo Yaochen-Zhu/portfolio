@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <Header />
-          <main className="flex-1 w-full max-w-2xl mx-auto px-6 pb-16">
+          <main className="flex-1 w-full max-w-3xl mx-auto px-6 pb-16">
             {children}
           </main>
         </ThemeProvider>

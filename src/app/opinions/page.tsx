@@ -11,7 +11,7 @@ export default function OpinionsPage() {
   const opinions = getAllOpinions();
 
   return (
-    <div className="max-w-[680px]">
+    <div className="max-w-[720px]">
       <h1 className="text-3xl font-semibold font-sans tracking-tight mb-4">
         Opinions
       </h1>

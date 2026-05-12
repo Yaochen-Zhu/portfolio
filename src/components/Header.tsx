@@ -19,7 +19,7 @@ export function Header() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <header className="w-full max-w-2xl mx-auto px-6 py-8 flex items-center justify-between">
+    <header className="w-full max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
       <Link
         href="/"
         className="text-lg font-semibold tracking-tight no-underline text-[var(--color-fg)] hover:opacity-70 transition-opacity"
