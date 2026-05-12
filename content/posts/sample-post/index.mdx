@@ -1,0 +1,51 @@
+---
+title: "A Curious Convergence: Visualizing Gradient Descent"
+date: "2025-12-15"
+description: "Exploring how gradient descent navigates non-convex loss landscapes, with animated visualizations showing different optimizer trajectories."
+tags: ["optimization", "visualization", "machine learning"]
+---
+
+Gradient descent is the workhorse of modern optimization, but its behavior in non-convex landscapes is surprisingly rich. Here I explore a few trajectories to build intuition.
+
+## The Setup
+
+Consider the Rosenbrock function — a classic test case for optimization:
+
+$$
+f(x, y) = (1 - x)^2 + 100(y - x^2)^2
+$$
+
+Despite being smooth and low-dimensional, its narrow curved valley makes it notoriously difficult for vanilla gradient descent.
+
+{/* Place a GIF here in your actual post */}
+{/* ![Gradient descent on Rosenbrock](./rosenbrock.gif) */}
+
+## Comparing Optimizers
+
+Three optimizers on the same landscape:
+
+1. **Vanilla SGD** oscillates heavily in the valley, taking many steps to converge.
+2. **Momentum** smooths the path by accumulating velocity, cutting through the oscillations.
+3. **Adam** adapts per-parameter step sizes, handling the anisotropic curvature naturally.
+
+<GifFigure
+  src="./rosenbrock.gif"
+  alt="Comparison of SGD, Momentum, and Adam on the Rosenbrock function"
+  caption="Figure: Trajectories of three optimizers on the Rosenbrock function. Notice how vanilla SGD (left) zig-zags while Adam (right) takes a more direct path."
+/>
+
+## Why This Matters
+
+In higher dimensions, these differences amplify. The condition number of the Hessian — the ratio of largest to smallest eigenvalues — determines how ill-conditioned the problem is.
+
+For a quadratic objective $\frac{1}{2}x^T H x$, gradient descent converges at a rate proportional to:
+
+$$
+\frac{\lambda_{\max} - \lambda_{\min}}{\lambda_{\max} + \lambda_{\min}}
+$$
+
+When this ratio is close to 1, convergence is fast. In deep learning, it's often close to 0, making vanilla SGD painfully slow without momentum or adaptive methods.
+
+## Takeaway
+
+The choice of optimizer is as much about geometry as it is about learning rate schedules. Visualizing these trajectories on low-dimensional test functions builds intuition that carries over to the high-dimensional problems we actually care about.
