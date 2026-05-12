@@ -8,18 +8,25 @@ export default function Home() {
   return (
     <div className="max-w-[720px]">
       {/* Hero */}
-      <section className="py-16 md:py-24">
-        <h1 className="text-4xl md:text-5xl font-semibold font-sans tracking-tight mb-4">
-          Yaochen Zhu
-        </h1>
-        <p className="text-xl text-[var(--color-muted)] font-serif leading-relaxed mb-6">
-          Applied Math PhD @ Brown
-        </p>
-        <p className="text-[var(--color-muted)] leading-relaxed font-serif">
-          This is my personal corner of the internet — a collection of research
-          notes too small for papers, opinions on mathematical practice, and
-          explorations of ideas I can&apos;t stop thinking about.
-        </p>
+      <section className="py-16 md:py-24 flex flex-col sm:flex-row items-start gap-8">
+        <img
+          src="/images/avatar.jpg"
+          alt="Yaochen Zhu"
+          className="w-32 h-32 rounded-full object-cover flex-shrink-0"
+        />
+        <div>
+          <h1 className="text-4xl md:text-5xl font-semibold font-sans tracking-tight mb-4">
+            Yaochen Zhu
+          </h1>
+          <p className="text-xl text-[var(--color-muted)] font-serif leading-relaxed mb-6">
+            Applied Math PhD @ Brown
+          </p>
+          <p className="text-[var(--color-muted)] leading-relaxed font-serif">
+            This is my personal corner of the internet — a collection of research
+            notes too small for papers, opinions on mathematical practice, and
+            explorations of ideas I can&apos;t stop thinking about.
+          </p>
+        </div>
       </section>
 
       {/* Recent posts */}
